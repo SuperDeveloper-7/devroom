@@ -33,7 +33,7 @@ const Login = () => {
             <div className="w-full max-w-md space-y-8">
               <div>
                 <Text className="text-4xl text-white text-center font-bold mb-2">
-                  DevRoom<span className="text-tertiary"> App (trial)</span>
+                  Devroom <span className="text-tertiary">App</span>
                 </Text>
 
                 <h2 className="text-white text-center text-base  tracking-tight text-gray-900">

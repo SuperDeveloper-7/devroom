@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import bg from "./components/assets/bg.png";
+// import Sidebar from './components/widgets/Sidebar';
 import Home from "./page/Home";
-import Feed from "./page/Feed";
+import Create from "./page/Create";
 import Signup from "./page/Signup";
 import Login from "./page/Login";
-import DevRoomTwo from "./page/DevRoomTwo";
-import DevRoomThree from "./page/DevRoomThree";
+import Feed from "./page/Feed";
+import Read from "./page/Read";
 import { Routes, Route } from "react-router-dom";
+// import Navbar from './components/widgets/Navbar';
 import Layout from "./components/widgets/Layout";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -26,28 +29,28 @@ function App() {
               />
 
               <Route
-                path="/roomOne"
+                path="/create"
+                element={
+                  <Layout>
+                    <Create />
+                  </Layout>
+                }
+              />
+
+              <Route
+                path="/feed/:id"
+                element={
+                  <Layout>
+                    <Read />
+                  </Layout>
+                }
+              />
+
+              <Route
+                path="/feed"
                 element={
                   <Layout>
                     <Feed />
-                  </Layout>
-                }
-              />
-
-              <Route
-                path="/roomTwo"
-                element={
-                  <Layout>
-                    <DevRoomTwo />
-                  </Layout>
-                }
-              />
-
-              <Route
-                path="/roomThree"
-                element={
-                  <Layout>
-                    <DevRoomThree />
                   </Layout>
                 }
               />

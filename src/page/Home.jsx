@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../components/elements/Card";
 import Text from "../components/elements/Text";
 import Button from "../components/elements/Button";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="text-white pt-10 pb-20">
       <section className="grid grid-cols-2 gap-4">

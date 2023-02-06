@@ -7,7 +7,7 @@ const Sidebar = () => {
     <aside className="text-white">
       <ul>
         <Text className="text-lg pl-4 mt-6 font-bold mb-12">
-          DevRoom <span className="text-tertiary">App 1.0</span>
+          DevRoom <span className="text-tertiary">App</span>
         </Text>
 
         <NavLink
@@ -22,36 +22,25 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink
-          to="/roomOne"
+          to="/create"
           className={({ isActive }) =>
             isActive
               ? "bg-secondary w-full block border-l-2 border-l-tertiary mr-2 py-3  text-sm"
               : "mr-2 text-sm py-3 pl-4"
           }
         >
-          <li className="p-4">DevRoom - 1</li>
+          <li className="p-4">Create</li>
         </NavLink>
 
         <NavLink
-          to="/roomTwo"
+          to="/feed"
           className={({ isActive }) =>
             isActive
               ? "bg-secondary w-full block border-l-2 border-l-tertiary mr-2 py-3  text-sm"
               : "mr-2 text-sm py-3 pl-4"
           }
         >
-          <li className="p-4">DevRoom - 2</li>
-        </NavLink>
-
-        <NavLink
-          to="/roomThree"
-          className={({ isActive }) =>
-            isActive
-              ? "bg-secondary w-full block border-l-2 border-l-tertiary mr-2 py-3  text-sm"
-              : "mr-2 py-3 text-sm pl-4"
-          }
-        >
-          <li className="p-4">DevRoom - 3</li>
+          <li className="p-4">Feed</li>
         </NavLink>
       </ul>
     </aside>
